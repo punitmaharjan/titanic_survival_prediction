@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 20px;
+    background-image: url('t2.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Lato',sans-serif;
+    font-weight: 700;
+}
+.form{
+    opacity:0.8;
+}
+.predict{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#eee;
+    font-size:40px;
+}

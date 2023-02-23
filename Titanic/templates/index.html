@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+    <title>Titanic Survival Prediction</title>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <form action="http://127.0.0.1:5000/" method="POST" class="text-light form form-control w-50 mt-5 bg-dark bg-gradient border-0 shadow rounded p-3">
+                <div class=" bg-dark bg-gradient text-light form-control d-flex justify-content-center mb-2">
+                    ENTER DETAILS BELOW TO PREDICT
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label for="Age" class="mb-1 form-label">Age</label>
+                        <input type="number" class="form-control" min="0" placeholder="Enter Age" name="age" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Sex" class="mb-1 form-label">Gender</label>
+                        <select class="form-control" name="gender" required>
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label for="" class="mb-1 form-label">Passenger Class</label>
+                    <select class="form-control" name="pclass" required>
+                        <option value="1">Class 1</option>
+                        <option value="2">Class 2</option>
+                        <option value="3">Class 3</option>
+                    </select>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label for="Age" class="mb-1 form-label">Number of Siblings/Spouses</label>
+                        <input type="number" class="form-control" min="0" 
+                        placeholder="Enter number of siblings/spouses" name="SibSp" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Sex" class="mb-1 form-label">Number of Parents/Children</label>
+                        <input type="number" class="form-control" name="parch" min="0" required>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label for="" class="mb-1 form-label">Fare</label>
+                    <input type="number" class="form-control" placeholder="Enter Fare" name="fare" 
+                    min="1" step="0.0001" required>
+                </div>
+                
+                <div class="mb-2">
+                    <label for="" class="mb-1 form-label">Port of Embarkation</label>
+                    <select class="form-control" name="embarked" required>
+                        <option value="2">Queenstown</option>
+                        <option value="0">Southampton</option>
+                        <option value="1">Cherbourg</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn bg-secondary border-0 mt-2 text-light w-100 shadow">
+                    Predict
+                </button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
